@@ -1,0 +1,325 @@
+:root{
+    --color-primary : #e35640;
+    --color-secondary : #000;
+    --color-border : grey;
+    --font-family: "Dancing Script", cursive;
+}
+
+.navbar-brand img{
+    width: 216px;
+    height: 51px;
+}
+
+
+.navbar-nav a{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: rgba(0,0,0,.5);
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    color : var(--color-primary)
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:active{
+    color : var(--color-primary)
+}
+
+.foodImg{
+    background-color: whitesmoke;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    box-shadow: 8px 20px 20px 8px rgba(0, 0, 0, 0.19), 8px 20px 20px 8px rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.foodImg img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.foodImg h5 , .foodImg p{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.foodImg h5 , .foodCard h5{
+    color : var(--color-primary);
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.foodImg p , .foodCard p{
+    color : black;
+    text-transform: capitalize;
+    /* overflow: hidden; */
+}
+
+.startCooking{
+    height : 374px;
+    width : 100%;
+    border: 2px var(--color-primary) solid;
+    padding : 25px 40px;
+    display: flex;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD1dUqJnyfe8c1c_Wg5cvZ-Vscnh2uovPu1Q&s) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-bottom: 70px;
+}
+
+.startCooking  img{
+    width : 55%;
+    justify-content: end;
+    align-content: end;
+    object-fit: cover;
+    border: var(--color-primary) 1px solid;
+    border-radius: 60%;
+}
+
+.startCooking  .content .heading{
+    justify-content: center;
+    align-content: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: cursive;
+    padding-top : 80px;
+}
+
+/* .startCooking .sociallinks{
+    justify-content: center;
+    align-content:center  ; 
+    text-align: center;
+} */
+
+
+.startCooking  .sociallinks a:not(:last-child) {
+    margin-right: 30px;
+}
+
+.sociallinks a:not(:last-child):after {
+    content: '';
+    height: 1px;
+    width: 11px;
+    background: #000;
+    position: absolute;
+    left: calc(100% + 9px);
+    top: 53%;
+}
+
+.startCooking  .sociallinks a {
+    font-style: italic;
+    font-size: 17px;
+    font-family: "EB Garamond",serif;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+.startCooking  .sociallinks a:hover,
+.startCooking  .sociallinks a:focus{
+    color: var(--color-primary);
+}
+
+@media all and (max-width : 700px) {
+    .startCooking img{
+        height : 600px;
+        width : 100%;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+@media all and (min-width : 700px) {
+    .startCooking img{
+        width : 55%;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+.mainHeading h2 , .newsletterHeading{
+   color : var(--color-primary);
+   text-transform: capitalize;
+   font-size: 45px;
+   font-family: "Dancing Script", cursive;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+   margin-bottom: 35px;
+}
+
+.card{
+    box-shadow: 8px 20px 20px 8px rgba(0, 0, 0, 0.19), 8px 20px 20px 8px rgba(0, 0, 0, 0.19);
+    transition: all 0.6s ease-in-out;
+}
+
+.card:hover,
+.card:focus,
+.card:active{
+    transform: scale(1.02);
+}
+
+.foodCard{
+    height : 350px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.foodCard img{
+    height: 100%;
+    width : 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+/* .foodCard img:hover,
+.foodCard img:focus,
+.foodCard img:active{
+    transform: scale(1.03);
+} */
+
+hr{
+    border: var(--color-border) 1px solid;
+    margin : 0px;
+}
+
+.foodCard .icon {
+    display: inline-block;
+    margin: 20px 30px 20px 0;
+}
+
+ /* .foodCard a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+} */
+
+.onRecipeHover {
+    height: 70%;
+    width: 100%;
+    background-color: rgba(50,50,50,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.hover-drop{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color : #fff;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}  
+
+.foodCard:hover .onRecipeHover,
+.foodCard:focus .onRecipeHover ,
+.foodCard:active .onRecipeHover,
+.foodCard:hover .hover-drop,
+.foodCard:focus .hover-drop,
+.foodCard:active .hover-drop{
+    opacity: 1;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 60%;
+}
+
+.slider img {
+    margin : 60px 0 60px 0;
+    height: 100%;
+    width: 60%;
+    opacity: 0.3;
+    transition: all .1s ease-in-out;
+}
+
+.slider img:hover,
+.slider img:focus, 
+.slider img:active {
+    opacity: 1;
+}
+
+.newsLetter {
+    padding: 1rem;
+    background-image: url("../images/newsletterFlower.png") ;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 110% 50%;
+    height : 300px;
+    width : 100%;
+    border: 2px var(--color-primary) solid;
+    margin: 45px 0 45px 0;
+}
+
+.newsletterHeading h2{
+    margin-bottom: 0px;
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.newsLetterpara h3{
+     font-family: var(--font-family);
+     font-size: 35px;
+     margin-bottom: 45px;
+}
+
+#newsletterEmail {
+    background-color: transparent;
+    border: none;
+    border-bottom: #5e5e5e 1px solid;
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+#newsletterBtn{
+    color:var(--color-primary);
+    cursor: pointer;
+}
+
+.fas.fa-location-arrow:before {
+    content: "/f124";
+}
+
+.backdrop{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0,0,0,0.7);
+    top :0;
+    left : 0;
+    display: none;
+    transition: all .6s linear;
+}
+
+.loader{
+    background-color: rgba(255,255,255,0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

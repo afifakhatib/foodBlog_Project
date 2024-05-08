@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food blog project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid mb-4">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img loading="lazy"
+                        src="https://braise.qodeinteractive.com/wp-content/uploads/2021/11/b-logo-new.png" 
+                        class="qodef-header-logo-image qodef--main" alt="logo main">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="addRecipe.html">Add Recipe</a>
+                        <a class="nav-link">About us</a>
+                      </div>
+                      <!-- <div class="button">
+                        <button type="button" class="btn btn-warning"><a href="addFrom.html">Add Recipe</a></button>
+                    </div> -->
+                    </div>
+            
+                  </nav>
+        </div>
+    </header>
+
+    <main>
+      <!-- heading section -->
+    <section class="allRecipeSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mainHeading text-center">
+                        <h2>Delicious Recipes by Braise</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- recipes card -->
+    <div class="container-fluid">
+        <div class="row" id="allRecipesContainer">
+         <div class="col-lg-3 col-md-6 col-12">
+            <div  class="card mt-4 mb-4">
+            <figure class="foodCard">
+               <img src="https://braise.qodeinteractive.com/wp-content/uploads/2021/09/main-home-recipe-list-img-5.jpg" 
+                alt="foodImg">
+                <div class="onRecipeHover">
+              
+                </div>
+                <div class="hover-drop">
+                  <a href="recipeInfo.html">View Recipe</a>
+                </div>
+                <figcaption>
+                  <h5>meat</h5>
+                  <p>creamy lentil soup with onion and carrot</p>
+                  <hr>
+                  <p class="icon"><i class="far fa-clock"></i>120 Minutes</p>
+                  <p class="icon"><i class="far fa-thumbs-up"></i>Medium</p>
+                </figcaption>
+            </figure>
+            </div>
+         </div>
+  
+       </div>
+      </div>
+
+      <!-- newsletter card  -->
+      <div class="container">
+        <div class="row">
+        <div class="newsLetter text-center">
+          <div class="newsletterHeading">
+            <h2>
+             our newsletter
+            </h2>
+          </div> 
+          <div class="newsLetterpara">
+            <h3>
+              Subscribe to our newsletter & keep up with our latest recipes and organized workshops.
+            </h3>
+          </div>
+          <div class="newsletterForm">
+            <form id="newsletterForm">
+                <div class="form-group">
+                    <label for="newsletterEmail"></label>
+                    <input type="text" placeholder="Enter you email address here" id="newsletterEmail">
+                    <i id="newsletterBtn"  class="fas fa-location-arrow fa-2x"></i>
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+      </div>
+
+       <!-- owl-carousel card slider -->
+    <div class="container-fluid">
+        <div class="slider">
+          <div class="owl-carousel owl-theme">
+            <div class="item" id="item">
+              <img src="https://braise.qodeinteractive.com/wp-content/uploads/2021/09/h1-client5-hover.png"
+              alt="...">
+            </div>
+            <div class="item">
+              <img src="https://braise.qodeinteractive.com/wp-content/uploads/2021/09/h1-client2-hover.png"
+              alt="...">
+            </div>
+            <div class="item">
+              <img src="https://braise.qodeinteractive.com/wp-content/uploads/2021/09/h1-client3-hover.png"
+              alt="...">
+            </div>
+            <div class="item">
+              <img src="https://braise.qodeinteractive.com/wp-content/uploads/2021/09/h1-client1-hover.png"
+              alt="...">
+            </div>
+            <div class="item">
+              <img src="https://braise.qodeinteractive.com/wp-content/uploads/2021/09/h1-client4-hover.png"
+              alt="...">
+            </div>
+        </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="loader d-none" id="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- owl.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- font awesome cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/app1.js"></script>
+    <!-- <script src="./assets/js/app.js"></script> -->
+    <!-- jquery slim cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <!-- bootstrap js cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" 
+ integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+ </body>
+ </html>     
