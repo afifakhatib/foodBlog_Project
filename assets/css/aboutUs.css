@@ -95,7 +95,28 @@ body{
     height : 100%;
 }
 
-@media all and (max-width : 767.98px){
+@media all and (max-width : 425px) {
+    figure{
+        flex-direction: column;
+    }
+    .cookingImg{
+        order: 0;
+        margin-bottom: 45px;
+        width:90%;
+    }
+    .para p{
+        font-size: 16px;
+    }
+    .knowUs h1{
+        margin-bottom: 20px;
+        font-size: 45px;
+    }
+    .video{
+        width : 250px;
+    }
+}
+
+@media all and (max-width : 768.98px) {
     figure{
         flex-direction: column;
     }
@@ -109,6 +130,9 @@ body{
     .knowUs h1{
         margin-bottom: 20px;
         font-size: 45px;
+    }
+    .video{
+        width : 250px;
     }
 }
 
