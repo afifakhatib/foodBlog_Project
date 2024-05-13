@@ -13,7 +13,7 @@ const owlCarousel = async () => {
          autoplayTimeout : 1500,
          responsive:{
              0:{
-                 items:1
+                 items:2
              },
              600:{
                  items:3

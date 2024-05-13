@@ -8,6 +8,7 @@ const time = document.getElementById('time')
 const level = document.getElementById('level')
 const chipsContainer = document.getElementById('chipsContainer')
 const allRecipesContainer = document.getElementById('allRecipesContainer')
+const clearRecipeBtn = document.getElementById('clearRecipeBtn')
 
 
 function generateUUID() {
@@ -92,7 +93,7 @@ const onRecipeAdd = async (e) => {
         if (ingredientArr.length > 0) {
     let data = await makeApiCall(RECIPE_URL , 'POST' , recipeObj)
     cl(data)
-    snackBarMsg("Something went wrong while adding recipe!!", "error", 2000)
+    snackBarMsg("Recipe added successfully!!! Check your Recipe in the Recipe Tab.", "success", 3000)
     }
       else{
         snackBarMsg("Please enter ingredients!!", "error", 2000)
@@ -102,9 +103,19 @@ const onRecipeAdd = async (e) => {
         snackBarMsg("Something went wrong while adding recipe!!", "error", 2000)
     }
     finally{
-    addRecipeForm.reset()
+        chipsContainer.innerHTML = "";
+        ingredientArr = [];
+        addRecipeForm.reset()
     }
 }
+
+const onClear = (eve) => {
+    chipsContainer.innerHTML = "";
+    ingredientArr = [];
+    addRecipeForm.reset();
+    snackBarMsg("Form Cleared!!", "success", 1500)
+}
+
 
 const addImageFile = async (eve) => {
     // cl(eve.target)
@@ -121,5 +132,6 @@ const addImageFile = async (eve) => {
 //    cl(data)
 }
 
+clearRecipeBtn.addEventListener('click' , onClear)
 imageUrl.addEventListener('change', addImageFile)
 addRecipeForm.addEventListener('submit', onRecipeAdd)
