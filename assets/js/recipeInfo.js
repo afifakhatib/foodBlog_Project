@@ -1,42 +1,95 @@
-let cl = console.log;
 
-const allRecipesContainer = document.getElementById('allRecipesContainer');
-const trendingContainer = document.getElementById('trendingContainer');
-const bannerContanier = document.getElementById('bannerContanier');
-const loader = document.getElementById('loader');
-// const loadQparams = document.getElementById("loadQparams");
+const titleInfo = document.getElementById('titleInfo');
+const bannerImg = document.getElementById('bannerImg');
+const headingInfo = document.getElementById('headingInfo');
+const descriptionInfo = document.getElementById('descriptionInfo');
+const listContanier = document.getElementById('listContanier')
 
-let BASE_URL = 'https://braise-attempt-01-default-rtdb.asia-southeast1.firebasedatabase.app';
-let RECIPE_URL = `${BASE_URL}/recipeArr.json`;
-let TRENDINGRECIPE_URL = `${BASE_URL}/trendingRecipe.json`;
 
-const loadertoggle = () =>{
-     loader.classList.toggle('d-none')
+const recipeTitle = eve => {
+    titleInfo.innerHTML = 
+     `
+        <h1>brasie menu</h1>
+        <h2>${eve.title}</h2>
+        <hr>
+        <p class="icon"><i class="far fa-clock"></i>${eve.time} Needs To Ready Recipe</p>
+        <p class="icon"><i class="far fa-thumbs-up"></i>${eve.level}</p>
+        `
 }
 
-const objToArr = (obj) =>{
-    let recipeArr = [];
-    for (const key in obj) {
-        recipeArr.push({...obj[key] , id : key})
-    }
-    return recipeArr;
+const recipeimg = eve => {
+    bannerImg.innerHTML = `
+    <img src="${eve.imageUrl}" 
+    alt="foodImg">
+         `
 }
 
-const makeApiCall = async (apiUrl , methodName , msgbody) => {
-    try{
-        loadertoggle()
-    msgbody = msgbody ? JSON.stringify(msgbody) : null
-     let res = await fetch(apiUrl , {
-        method : methodName,
-        body : msgbody
-     })
-     return res.json()
-    }
-    catch(err){
-        cl(err)
-    }
-    finally{
-        loadertoggle()
-    }
+const recipeIngredient = arr => {
+    // headingInfo.innerHTML = 
+    //    ` 
+    //         <h1>
+    //           ingredients:
+    //         </h1>
+    //         <p>${eve.ingredients}</p>
+    //       `
+
+    let data = arr.ingredients
+    cl(data)
+    let result = ``
+    data.forEach((ele , index) => {
+       result += `
+           <li>
+             <input type="checkbox" id="${index+1}">
+             <label for="${index+1}">${ele} </label>
+           </li>
+                  `
+    })
+    listContanier.innerHTML = result;
 }
 
+const recipedescription = eve =>{
+    descriptionInfo.innerHTML = `
+    <h1> Description and recipes</h1>
+    <p>${eve.description}</p>    
+                      `
+}
+
+document.addEventListener('DOMContentLoaded', async() => {
+    let currentUrl = new URL(window.location.href);
+    let queryparams = new URLSearchParams(currentUrl.search);
+    let getrecipeid = queryparams.get('recipeid');
+    let recipeUrl = `${BASE_URL}/newRecipe/${getrecipeid}.json`;
+    let trendingUrl = `${BASE_URL}/trending/${getrecipeid}.json`;
+
+
+    // let data = await makeApiCall(recipeUrl , 'GET')
+    // cl(data)
+    // recipeTitle(data);
+    // recipeimg(data);
+    // recipeHeading(data);
+    // recipedescription(data);
+
+    
+    // let data1 = await makeApiCall(trendingUrl , 'GET')
+    // cl(data1)
+    // recipeTitle(data1);
+    // recipeimg(data1);
+    // recipeHeading(data1);
+    // recipedescription(data1);
+
+    let apiArr = [makeApiCall(recipeUrl , 'GET') , makeApiCall(trendingUrl , 'GET')]
+    let [data , data1] = await Promise.all(apiArr)
+    cl(data , data1)
+
+    if(data != null){
+        recipeTitle(data);
+        recipeimg(data);
+        recipeIngredient(data);
+        recipedescription(data);
+    }else{
+        recipeTitle(data1);
+        recipeimg(data1);
+        recipeIngredient(data1);
+        recipedescription(data1);
+    }
+})

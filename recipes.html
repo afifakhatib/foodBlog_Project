@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>food blog project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
@@ -33,9 +34,9 @@
                       <div class="navbar-nav">
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-link" href="recipes.html">Recipes</a>
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <!-- <a class="nav-link" href="contact.html">Contact</a> -->
                         <a class="nav-link" href="addRecipe.html">Add Recipe</a>
-                        <a class="nav-link">About us</a>
+                        <a class="nav-link" href="AboutUs.html">About us</a>
                       </div>
                       <!-- <div class="button">
                         <button type="button" class="btn btn-warning"><a href="addFrom.html">Add Recipe</a></button>
@@ -88,33 +89,7 @@
        </div>
       </div>
 
-      <!-- newsletter card  -->
-      <div class="container">
-        <div class="row">
-        <div class="newsLetter text-center">
-          <div class="newsletterHeading">
-            <h2>
-             our newsletter
-            </h2>
-          </div> 
-          <div class="newsLetterpara">
-            <h3>
-              Subscribe to our newsletter & keep up with our latest recipes and organized workshops.
-            </h3>
-          </div>
-          <div class="newsletterForm">
-            <form id="newsletterForm">
-                <div class="form-group">
-                    <label for="newsletterEmail"></label>
-                    <input type="text" placeholder="Enter you email address here" id="newsletterEmail">
-                    <i id="newsletterBtn"  class="fas fa-location-arrow fa-2x"></i>
-                </div>
-            </form>
-        </div>
-        </div>
-        </div>
-      </div>
-
+  
        <!-- owl-carousel card slider -->
     <div class="container-fluid">
         <div class="slider">
@@ -142,6 +117,57 @@
         </div>
         </div>
       </div>
+
+      <footer class="footerSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footerLogo text-center">
+                      <img loading="lazy" decoding="async" itemprop="image"
+                      src="https://braise.qodeinteractive.com/wp-content/uploads/2021/11/iii.png" width="212" height="58" alt="">
+                 
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="footerPara text-center">
+                        <p>Theme especially made for cooking experts, novices &amp; all who enjoy sharing their recipes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="footerIcon text-center">
+                        <a href="javascript:;">
+                          <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a href="javascript:;">
+                          <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="javascript:;">
+                          <i class="fab fa-pinterest-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="footerForm text-center">
+                        <form id="footerForm">
+                            <div class="form-group">
+                                <label for="newsletterEmailF"></label>
+                                <input type="text" placeholder="Enter you email address here" id="footerEmail">
+                                <button type="submit"><i id="newsletterBtn" class="fa fa-solid fa-location-arrow fa-2x">
+                                </i></button>
+                                   <p>Be informed about the latest recipes &amp; workshops.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footerStrip">
+            <a href="javascript:;">Privacy Policy</a>
+            <p><i class="fa fa-regular fa-copyright"></i> 2024 Qode Interactive, All Rights Reserved</p>
+        </div>
+    </footer>
     </main>
 
     <div class="loader d-none" id="loader">
@@ -150,6 +176,8 @@
       </div>
     </div>
 
+     <!-- sweetalert -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
     <!-- jquery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
@@ -160,8 +188,8 @@
      <!-- font awesome cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/app1.js"></script>
-    <!-- <script src="./assets/js/app.js"></script> -->
+    <script src="./assets/js/helper.js"></script>
+    <script src="./assets/js/recipes.js"></script>
     <!-- jquery slim cdn -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

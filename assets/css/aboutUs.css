@@ -1,0 +1,285 @@
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* about us css */
+
+.mainHeading{
+    padding: 1rem;
+    background-image: url("../images/newsletterFlower.png") ;
+    background-repeat: repeat;
+    background-size: 50%;
+    background-position: 110% 50%;
+    height : 250px;
+    width : 100%;
+    background-color: rgb(241, 228, 228);
+    box-shadow: 8px 20px 20px 8px rgba(0, 0, 0, 0.19), 8px 20px 20px 8px rgba(0, 0, 0, 0.19);
+    margin-bottom: 45px;
+}
+
+.knowUs h1{
+    color : var(--color-primary);
+    text-transform: capitalize;
+    font-size: 50px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 25px;
+}
+
+.para p{
+    color : var(--color-secondary);
+    font-size: 25px;
+    font-style: normal;
+    margin : 0px;
+}
+
+.para p span{
+    color : var(--color-primary);
+    text-transform: uppercase;
+}
+
+.cookingImg{
+    height: 400px;
+    width : 100%;
+    padding : 20px;
+    background-color: #fff;
+    box-shadow: 8px 20px 20px 8px rgba(0, 0, 0, 0.19), 8px 20px 20px 8px rgba(0, 0, 0, 0.19);
+    margin-right: 45px;
+}
+
+.cookingImg img{
+    height : 100%;
+    width : 100%;
+    object-fit: cover;
+}
+
+.aboutUsDetails .aboutusHeading h2{
+    color : var(--color-primary);
+    text-transform: capitalize;
+    font-size: 45px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 20px;
+    border-bottom: var(--color-secondary) 3px double;
+}
+
+.aboutUsDetails .aboutUsContent p{
+     font-size: 20px;
+     margin-bottom: 30px;
+}
+
+.order-1{
+    order: 1;
+}
+
+.videoSection{
+    background : none;
+    margin-top: 50px;
+}
+
+.video{
+    margin: 0 auto;
+    width : 450px;
+    height : 500px;
+}
+
+.video video{
+    width : 100%;
+    height : 100%;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 60%;
+}
+
+.slider img {
+    margin : 60px 0 60px 0;
+    height: 100%;
+    width: 60%;
+    opacity: 0.3;
+    transition: all .1s ease-in-out;
+}
+
+.slider img:hover,
+.slider img:focus, 
+.slider img:active {
+    opacity: 1;
+}
+
+/* footer section */
+
+.footerSec {
+    margin-top: 50px;
+    background: rgb(241, 228, 228);
+    /* background-image: url("https://adnan-suheb.github.io/braise-Attemp01/images/footer/footerBackground.png"); */
+    background-image: url("../images/newsletterFlower.png") ;
+
+}
+
+.footerLogo {
+    margin: 40px auto 20px;
+    width: 250px;
+    height: 70px;
+}
+
+.footerLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footerPara p {
+    font-size: 16px;
+    color: rgb(96, 96, 96);
+    margin: 15px 0;
+}
+
+.footerIcon {
+    margin: 10px 0 10px;
+}
+
+.footerIcon a {
+    margin: 0 15px;
+    font-size: 35px;
+    color : var(--color-primary);
+    text-decoration: none;
+}
+
+.footerForm {
+    margin: 16px 0;
+}
+
+.fa-instagram:before {
+    content: "\e055";
+    color : var(--color-primary)
+}
+
+.fa-facebook:before {
+    content: "\f082";
+    color : var(--color-primary)
+}
+
+.fa-pinterest:before {
+    content: "\f0d3";
+    color : var(--color-primary)
+}
+
+.footerForm #footerEmail {
+    margin: 16px 0 20px;
+}
+
+#newsletterBtn {
+    color: var(--color-primary);
+}
+
+#newsletterEmailF {
+    background-color: transparent;
+    border: none;
+    border-bottom: #5e5e5e 1px solid;
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+.fa-location-arrow:before {
+    content: "\f124";
+}
+
+.footerForm p {
+    font-size: 16px;
+    color: rgb(96, 96, 96);
+    font-style: italic;
+    margin-bottom: 45px;
+}
+
+.footerStrip {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.footerStrip p, .footerStrip a {
+    font-size: 10px;
+    color: rgb(96, 96, 96);
+    text-transform: capitalize;
+}
+
+
+
+.backdrop{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0,0,0,0.7);
+    top :0;
+    left : 0;
+    display: none;
+    transition: all .6s linear;
+}
+
+.loader{
+    background-color: rgba(255,255,255,0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.aboutUsContent{
+    background-color: #fff;
+    box-shadow: 8px 20px 20px 8px rgba(0, 0, 0, 0.19), 8px 20px 20px 8px rgba(0, 0, 0, 0.19);
+    width : 100%;
+    border: var(--color-primary) 3px solid;
+    padding : 20px;
+    margin-bottom: 45px;
+}
+
+.mainHeadContent p{
+    color : var(--color-secondary);
+    font-size: 30px;
+    font-family: "Dancing Script", cursive;
+    text-transform: capitalize;
+    margin-bottom: 45px;
+    border: var(--color-primary) 0.5px double;
+}
+
+.mainHeadContent p span {
+    color : var(--color-primary);
+}
+
+.aboutUsHeading h2{
+    color : var(--color-secondary);
+    text-transform: capitalize;
+    font-size: 45px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 35px;
+    border-bottom: var(--color-primary) 3px double;
+}
+
+.aboutUsDescription p{
+    color : var(--color-secondary);
+    text-transform: capitalize;
+    font-size: 25px;
+    font-family: "Dancing Script", cursive; 
+    font-family :Arial, Helvetica, sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 35px;
+} */
+

@@ -98,11 +98,11 @@
     padding-top : 80px;
 }
 
-/* .startCooking .sociallinks{
+ .startCooking .sociallinks{
     justify-content: center;
     align-content:center  ; 
     text-align: center;
-} */
+} 
 
 
 .startCooking  .sociallinks a:not(:last-child) {
@@ -121,11 +121,11 @@
 
 .startCooking  .sociallinks a {
     font-style: italic;
-    font-size: 17px;
+    font-size: 20px;
     font-family: "EB Garamond",serif;
     display: inline-block;
     position: relative;
-    font-weight: 500;
+    font-weight: bold;
     color: var(--color-secondary);
 }
 
@@ -134,22 +134,41 @@
     color: var(--color-primary);
 }
 
-@media all and (max-width : 700px) {
+@media all and (max-width : 767.98px) {
+    .startCooking{
+        padding : 40px 20px;
+        background-size: 200%;
+        margin-top: 50px;
+    }
     .startCooking img{
-        height : 600px;
-        width : 100%;
-        justify-content: center;
-        align-content: center;
+        width : 120%;
+        margin-top: 40px;
+    }
+    .startCooking  .content .heading {
+        padding-top: 35px;
+        font-size: 20px;
+        font-weight: bold;
     }
 }
 
-@media all and (min-width : 700px) {
+@media all and (min-width : 767.98px) {
+    .startCooking{
+        padding : 25px 25px;
+        background-size: 100%;
+        margin-bottom: 50px;
+    }
     .startCooking img{
         width : 55%;
-        justify-content: center;
+        justify-content: start;
         align-content: center;
     }
-}
+    .startCooking  .content .heading {
+        padding-top: 50px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+   
+} 
 
 .mainHeading h2 , .newsletterHeading{
    color : var(--color-primary);
@@ -232,6 +251,10 @@ hr{
     transition: all .3s ease-in-out;
 }  
 
+.b-color{
+    background-color: var(--color-primary);
+}
+
 .foodCard:hover .onRecipeHover,
 .foodCard:focus .onRecipeHover ,
 .foodCard:active .onRecipeHover,
@@ -300,6 +323,118 @@ hr{
 .fas.fa-location-arrow:before {
     content: "/f124";
 }
+
+@media all and (max-width: 991.98px) {
+    .newsletterHeading h2{
+        margin-bottom: 0px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .newsLetterpara h3{
+         font-size: 32px;
+         margin-bottom: 30px;
+    }
+
+}
+
+
+/* footer section */
+
+.footerSec {
+    margin-top: 50px;
+    background: rgb(241, 228, 228);
+    /* background-image: url("https://adnan-suheb.github.io/braise-Attemp01/images/footer/footerBackground.png"); */
+    background-image: url("../images/newsletterFlower.png") ;
+
+}
+
+.footerLogo {
+    margin: 40px auto 20px;
+    width: 250px;
+    height: 70px;
+}
+
+.footerLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footerPara p {
+    font-size: 16px;
+    color: rgb(96, 96, 96);
+    margin: 15px 0;
+}
+
+.footerIcon {
+    margin: 10px 0 10px;
+}
+
+.footerIcon a {
+    margin: 0 15px;
+    font-size: 35px;
+    color : var(--color-primary);
+    text-decoration: none;
+}
+
+.footerForm {
+    margin: 16px 0;
+}
+
+.fa-instagram:before {
+    content: "\e055";
+    color : var(--color-primary)
+}
+
+.fa-facebook:before {
+    content: "\f082";
+    color : var(--color-primary)
+}
+
+.fa-pinterest:before {
+    content: "\f0d3";
+    color : var(--color-primary)
+}
+
+.footerForm #footerEmail {
+    margin: 16px 0 20px;
+}
+
+#newsletterBtn {
+    color: var(--color-primary);
+}
+
+#newsletterEmailF {
+    background-color: transparent;
+    border: none;
+    border-bottom: #5e5e5e 1px solid;
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+.fa-location-arrow:before {
+    content: "\f124";
+}
+
+.footerForm p {
+    font-size: 16px;
+    color: rgb(96, 96, 96);
+    font-style: italic;
+    margin-bottom: 45px;
+}
+
+.footerStrip {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.footerStrip p, .footerStrip a {
+    font-size: 10px;
+    color: rgb(96, 96, 96);
+    text-transform: capitalize;
+}
+
+
 
 .backdrop{
     position: fixed;
